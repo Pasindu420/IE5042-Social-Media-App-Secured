@@ -8,7 +8,10 @@ const app = Express();
 import postRoutes from './routes/post.js';
 import authRoutes from './routes/auth.js';
 import helmet from "helmet";
-app.use(helmet());
+app.use(helmet({
+    contentSecurityPolicy: true, // Specifically enables CSP to prevent XSS
+    xFrameOptions: { action: 'deny' } // Strictly prevents Clickjacking
+}));
 app.use(bodyParser.json({limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 app.use(cors());

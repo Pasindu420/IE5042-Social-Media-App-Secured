@@ -66,12 +66,17 @@ export const updatePost = async (req, res)=>{
     res.json(updatePost);
 }
 
-export const deletePost = async (req, res)=>{
-    const {id: _id} = req.params;
-    console.log("Delete");
-    if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send("No post with that id");
-    await PostMessage.findByIdAndRemove(_id);
-    res.json({message: "post deleted successfully"});
+export const deletePost = async (req, res) => {
+    const { id } = req.params;
+    const post = await PostMessage.findById(id);
+
+    // Check if the user trying to delete is the one who created it
+    if (post.creator !== req.userId) {
+        return res.status(403).json({ message: "Action Unauthorized: You do not own this post." });
+    }
+
+    await PostMessage.findByIdAndRemove(id);
+    res.json({ message: "Post deleted successfully." });
 }
 
 export const likePost = async (req, res)=>{
