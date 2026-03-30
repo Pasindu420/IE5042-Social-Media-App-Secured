@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZAP by Checkmarx Scanning Report</title>
+<link
+	href="2026-03-20-ZAP-Report%20Backend-/normalize/normalize.css" rel="stylesheet">
+<link
+	href="2026-03-20-ZAP-Report%20Backend-/themes/original/main.css" rel="stylesheet">
+<link
+	href="2026-03-20-ZAP-Report%20Backend-/themes/original/colors.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>ZAP by Checkmarx Scanning Report</h1>
+		<p>
+			<span>Generated with</span> <a href="https://zaproxy.org"><img
+				src="2026-03-20-ZAP-Report%20Backend-/zap32x32.png" alt="The ZAP logo" class="zap-logo">ZAP</a>
+			<span>on Fri 20 Mar 2026, at 11:14:23</span>
+		</p>
+		<p>ZAP Version: 2.16.1</p>
+		<p>
+			ZAP by <a href="https://checkmarx.com/">Checkmarx</a>
+		</p>
+	</header>
+
+	<main>
+
+		<section id="contents" class="contents">
+			<h2>Contents</h2>
+			<nav>
+				<ol>
+					<li><a
+						href="#about-this-report">About This Report</a>
+						<ol>
+							
+							<li><a
+								href="#report-parameters">Report Parameters</a></li>
+						</ol></li>
+					<data-th-block>
+					<li><a
+						href="#summaries">Summaries</a>
+						<ol>
+							<li><a
+								href="#risk-confidence-counts">Alert Counts by Risk and Confidence</a></li>
+							<li><a
+								href="#site-risk-counts">Alert Counts by Site and Risk</a></li>
+							<li><a
+								href="#alert-type-counts">Alert Counts by Alert Type</a></li>
+						</ol></li>
+					<li><a
+						href="#alerts">Alerts</a>
+						<ol>
+							
+							 
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-2-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Medium</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-2-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Medium</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(1)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-1-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Low</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-1-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Low</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(1)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-0-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(1)</span></a></li>
+							
+							
+							  
+						</ol></li>
+					<li><a
+						href="#appendix">Appendix</a>
+						<ol>
+							<li><a
+								href="#alert-types">Alert Types</a></li>
+						</ol></li>
+					</data-th-block>
+				</ol>
+			</nav>
+		</section>
+
+		<section
+			id="about-this-report" class="about-this-report">
+			<h2>About This Report</h2>
+
+			
+
+			<section
+				id="report-parameters">
+				<h3>Report Parameters</h3>
+				<div class="report-parameters--container">
+					<h4>Contexts</h4>
+					
+					
+					<p>No contexts were selected, so all contexts were included by default.</p>
+					  
+
+					<h4>Sites</h4>
+					
+					<p>The following sites were included:</p>
+					<ul class="sites-list">
+						<li><span class="site">http://localhost:5000</span></li>
+					</ul>
+					
+					<p>(If no sites were selected, all sites were included by default.)</p>
+					<p>An included site must also be within one of the included contexts for its data to be included in the report.</p>
+
+					<h4>Risk levels</h4>
+					<p>
+						<span>Included</span>:
+						 
+						<span class="included-risk-codes"><span class="risk-level">High</span>, <span class="risk-level">Medium</span>, <span class="risk-level">Low</span>, <span class="risk-level">Informational</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						 <span>None</span>
+						
+					</p>
+
+					<h4>Confidence levels</h4>
+					<p>
+						<span>Included</span>:
+						
+						
+						<span class="included-confidence-codes"><span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						
+						
+						<span class="included-confidence-codes"> <span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span>, <span class="confidence-level">False Positive</span></span>
+					</p>
+				</div>
+			</section>
+		</section>
+
+		
+		<section>
+			
+		</section>
+		
+		<section id="summaries" class="summaries">
+			<h2>Summaries</h2>
+
+			<section
+				id="risk-confidence-counts">
+				<h3>Alert Counts by Risk and Confidence</h3>
+				<table class="risk-confidence-counts-table">
+					<caption>
+						<p>This table shows the number of alerts for each level of risk and confidence included in the report.</p>
+						<p>(The percentages in brackets represent the count as a percentage of the total number of alerts included in the report, rounded to one decimal place.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%">
+						<col style="width: 14.0%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup"
+								colspan="5">Confidence</th>
+						</tr>
+						<tr>
+							<th scope="col">User Confirmed</th>
+							<th scope="col">High</th>
+							<th scope="col">Medium</th>
+							<th scope="col">Low</th>
+							<th scope="col">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="5">Risk</th>
+							<th scope="row">High</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Medium</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(20.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(20.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(40.0%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Low</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(20.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(20.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(40.0%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Informational</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(20.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(20.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row">Total</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(40.0%)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(60.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>5</span><br> <span
+								class="additional-info-percentages">(100%)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="site-risk-counts">
+				<h3>Alert Counts by Site and Risk</h3>
+				<table class="site-risk-counts-table">
+					<caption>
+						<p>This table shows, for each site for which one or more alerts were raised, the number of alerts raised at each risk level.</p>
+						<p>Alerts with a confidence level of &quot;False Positive&quot; have been excluded from these counts.</p>
+						<p>(The numbers in brackets are the number of alerts raised for the site at or above that risk level.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="4">Risk</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span>High</span><br>  <span
+									class="additional-info-percentages">(= High)</span>  
+							</th>
+							<th scope="col">
+								<span>Medium</span><br>   <span
+									class="additional-info-percentages">(&gt;= Medium)</span> 
+							</th>
+							<th scope="col">
+								<span>Low</span><br>   <span
+									class="additional-info-percentages">(&gt;= Low)</span> 
+							</th>
+							<th scope="col">
+								<span>Informational</span><br>   <span
+									class="additional-info-percentages">(&gt;= Informational)</span> 
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="1">Site</th>
+							<th scope="row">http://localhost:5000</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(2)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(4)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5)</span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="alert-type-counts">
+				<h3>Alert Counts by Alert Type</h3>
+				<table class="alert-type-counts-table">
+					<caption>
+						<p>This table shows the number of alerts of each alert type, together with the alert type&#39;s risk level.</p>
+						<p>(The percentages in brackets represent each count as a percentage, rounded to one decimal place, of the total number of alerts included in this report.)</p>
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Alert type</th>
+							<th scope="col">Risk</th>
+							<th scope="col">Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-0">CSP: Failure to Define Directive with No Fallback</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(20.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-1">Cross-Domain Misconfiguration</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(20.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-2">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(20.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-3">ZAP is Out of Date</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(20.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-4">Tech Detected - Express</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(20.0%)</span></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row">Total</th>
+							<td></td>
+							<td>5</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+		</section>
+
+		<section id="alerts" class="alerts">
+			<h2>Alerts</h2>
+			<ol>
+				
+				 
+				 
+				
+				
+				<li id="alerts--risk-2-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Medium</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:5000</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-0">CSP: Failure to Define Directive with No Fallback</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:5000/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Content Security Policy fails to define one of the directives that has no fallback. Missing/excluding them is the same as allowing anything.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The directive(s): frame-ancestors, form-action is/are among the directives that do not fallback to default-src.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (427 bytes)</summary>
+				
+				<pre><code>GET http://localhost:5000/ HTTP/1.1
+host: localhost:5000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (304 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src &#39;none&#39;
+X-Content-Type-Options: nosniff
+Content-Type: text/html; charset=utf-8
+Content-Length: 139
+Date: Fri, 20 Mar 2026 05:41:16 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (139 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;pre&gt;Cannot GET /&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>Content-Security-Policy</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>default-src &#39;none&#39;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Medium</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:5000</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-1">Cross-Domain Misconfiguration</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:5000/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control.html">OWASP_2017_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/264.html">CWE-264</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (427 bytes)</summary>
+				
+				<pre><code>GET http://localhost:5000/ HTTP/1.1
+host: localhost:5000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (304 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src &#39;none&#39;
+X-Content-Type-Options: nosniff
+Content-Type: text/html; charset=utf-8
+Content-Length: 139
+Date: Fri, 20 Mar 2026 05:41:16 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (139 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;pre&gt;Cannot GET /&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Access-Control-Allow-Origin: *</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p>
+
+<p>Configure the &quot;Access-Control-Allow-Origin&quot; HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				<li id="alerts--risk-1-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Low</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:5000</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-3">ZAP is Out of Date</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:5000/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/1104.html">CWE-1104</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The version of ZAP you are using to test your app is out of date and is no longer being updated.</p>
+
+<p>The risk level is set based on how out of date your ZAP version is.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The latest version of ZAP is 2.17.0</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (427 bytes)</summary>
+				
+				<pre><code>GET http://localhost:5000/ HTTP/1.1
+host: localhost:5000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (304 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src &#39;none&#39;
+X-Content-Type-Options: nosniff
+Content-Type: text/html; charset=utf-8
+Content-Length: 139
+Date: Fri, 20 Mar 2026 05:41:16 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (139 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;pre&gt;Cannot GET /&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Download the latest version of ZAP from https://www.zaproxy.org/download/ and install it.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-1-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Low</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:5000</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-2">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:5000/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework">WSTG-v42-INFO-08</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/497.html">CWE-497</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The web/application server is leaking information via one or more &quot;X-Powered-By&quot; HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (427 bytes)</summary>
+				
+				<pre><code>GET http://localhost:5000/ HTTP/1.1
+host: localhost:5000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (304 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src &#39;none&#39;
+X-Content-Type-Options: nosniff
+Content-Type: text/html; charset=utf-8
+Content-Length: 139
+Date: Fri, 20 Mar 2026 05:41:16 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (139 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;pre&gt;Cannot GET /&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>X-Powered-By: Express</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress &quot;X-Powered-By&quot; headers.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				
+				
+				<li id="alerts--risk-0-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:5000</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-4">Tech Detected - Express</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:5000/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The following &quot;Web frameworks, Web servers&quot; technology was identified: Express.</p>
+
+<p>Described as:</p>
+
+<p>Express is a web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The following CPE is associated with the identified tech: cpe:2.3:a:expressjs:express:*:*:*:*:*:*:*:*</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (427 bytes)</summary>
+				
+				<pre><code>GET http://localhost:5000/ HTTP/1.1
+host: localhost:5000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (304 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src &#39;none&#39;
+X-Content-Type-Options: nosniff
+Content-Type: text/html; charset=utf-8
+Content-Length: 139
+Date: Fri, 20 Mar 2026 05:41:16 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (139 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;pre&gt;Cannot GET /&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Express</code></pre></td>
+	</tr>
+	
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+			</ol>
+		</section>
+
+		<section id="appendix" class="appendix">
+			<h2>Appendix</h2>
+
+			<section id="alert-types" class="alert-types">
+				<h3>Alert Types</h3>
+				<p class="alert-types-intro">This section contains additional information on the types of alerts in the report.</p>
+				<ol>
+					<li
+						id="alert-type-0">
+						<h4>CSP: Failure to Define Directive with No Fallback</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10055/">CSP</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.w3.org/TR/CSP/">https://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="https://caniuse.com/#search=content+security+policy">https://caniuse.com/#search=content+security+policy</a></li>
+										<li><a
+											href="https://content-security-policy.com/">https://content-security-policy.com/</a></li>
+										<li><a
+											href="https://github.com/HtmlUnit/htmlunit-csp">https://github.com/HtmlUnit/htmlunit-csp</a></li>
+										<li><a
+											href="https://web.dev/articles/csp#resource-options">https://web.dev/articles/csp#resource-options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-1">
+						<h4>Cross-Domain Misconfiguration</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10098/">Cross-Domain Misconfiguration</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/264.html">264</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>14</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://vulncat.fortify.com/en/detail?category=HTML5&amp;subcategory=Overly%20Permissive%20CORS%20Policy">https://vulncat.fortify.com/en/detail?category=HTML5&amp;subcategory=Overly%20Permissive%20CORS%20Policy</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-2">
+						<h4>Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10037/">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/497.html">497</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework">https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework</a></li>
+										<li><a
+											href="https://www.troyhunt.com/shhh-dont-let-your-response-headers/">https://www.troyhunt.com/shhh-dont-let-your-response-headers/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-3">
+						<h4>ZAP is Out of Date</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10116/">ZAP is Out of Date</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1104.html">1104</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>45</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.zaproxy.org/download/">https://www.zaproxy.org/download/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-4">
+						<h4>Tech Detected - Express</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									     <span>raised by other tools/functionalities in ZAP (for example, fuzzer, HTTPS Info add-on, custom scripts...)</span>
+									  <span>(plugin ID: 10004)</span>       
+								</td>
+							</tr>
+							
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://expressjs.com">https://expressjs.com</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+				</ol>
+			</section>
+		</section>
+		 
+	</main>
+</body>
+</html>
+
+
+
