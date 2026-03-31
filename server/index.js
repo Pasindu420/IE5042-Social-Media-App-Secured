@@ -8,9 +8,19 @@ const app = Express();
 import postRoutes from './routes/post.js';
 import authRoutes from './routes/auth.js';
 import helmet from "helmet";
+// Locate this section in server/index.js (around line 10-15)
 app.use(helmet({
-    contentSecurityPolicy: true, // Specifically enables CSP to prevent XSS
-    xFrameOptions: { action: 'deny' } // Strictly prevents Clickjacking
+    contentSecurityPolicy: {
+        directives: {
+            defaultSrc: ["'self'"], // Only allow resources from your own domain
+            scriptSrc: ["'self'", "https://accounts.google.com", "https://apis.google.com"], // Allow Google Scripts
+            connectSrc: ["'self'", "https://accounts.google.com"], // Allow AJAX to Google
+            frameSrc: ["'self'", "https://accounts.google.com"], // Allow the Google Login popup
+            imgSrc: ["'self'", "data:", "https://lh3.googleusercontent.com"], // Allow profile pictures
+            styleSrc: ["'self'", "'unsafe-inline'"], // Allow CSS
+        },
+    },
+    xFrameOptions: { action: 'deny' } // Prevents Clickjacking
 }));
 app.use(bodyParser.json({limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));

@@ -1,5 +1,6 @@
 import PostMessage from "../models/postMessage.js";
 import mongoose from "mongoose";
+import bcrypt from 'bcryptjs'
 
 export const getPostBySearch = async(req, res) => {
     const {search, tags} = req.query;
