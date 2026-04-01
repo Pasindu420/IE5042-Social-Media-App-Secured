@@ -5,10 +5,16 @@ import  Express  from "express";
 import cors from 'cors';
 import mongoose from "mongoose";
 const app = Express();
+
+
+
+
 import postRoutes from './routes/post.js';
 import authRoutes from './routes/auth.js';
 import helmet from "helmet";
 // Locate this section in server/index.js (around line 10-15)
+
+app.disable("x-powered-by");
 app.use(helmet({
     contentSecurityPolicy: {
         directives: {
