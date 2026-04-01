@@ -1,10 +1,10 @@
 import dotenv from 'dotenv';
 dotenv.config();
 import bodyParser from "body-parser";
-import  Express  from "express";
+import  express  from "express";
 import cors from 'cors';
 import mongoose from "mongoose";
-const app = Express();
+const app = express();
 
 
 
@@ -28,9 +28,14 @@ app.use(helmet({
     },
     xFrameOptions: { action: 'deny' } // Prevents Clickjacking
 }));
-app.use(bodyParser.json({limit: "30mb", extended: true}));
-app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
+//app.use(bodyParser.json({limit: "30mb", extended: true}));
+//app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 //app.use(cors());
+
+// Replace the old 30mb lines with these:
+app.use(express.json({ limit: "10kb" }));
+app.use(express.urlencoded({ limit: "10kb", extended: true }));
+
 app.use(cors({
   origin: "http://localhost:3000",
   methods: ["GET", "POST"],
