@@ -1,67 +1,49 @@
 import dotenv from 'dotenv';
 dotenv.config();
 import bodyParser from "body-parser";
-import  express  from "express";
+import express from "express";
 import cors from 'cors';
 import mongoose from "mongoose";
-const app = express();
+import helmet from "helmet";
 
+// --- OAuth & Passport Imports ---
+import session from 'express-session';
+import passport from 'passport';
+import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 
-
-
+// --- Route Imports ---
 import postRoutes from './routes/post.js';
 import authRoutes from './routes/auth.js';
-import helmet from "helmet";
-// Locate this section in server/index.js (around line 10-15)
 
-app.disable("x-powered-by");
+const app = express();
+
+// --- 1. Security & Middleware Configuration ---
+app.disable("x-powered-by"); // Fix for Sensitive Info Exposure
+
 app.use(helmet({
-    contentSecurityPolicy: {
-        directives: {
-            defaultSrc: ["'self'"], // Only allow resources from your own domain
-            scriptSrc: ["'self'", "https://accounts.google.com", "https://apis.google.com"], // Allow Google Scripts
-            connectSrc: ["'self'", "https://accounts.google.com"], // Allow AJAX to Google
-            frameSrc: ["'self'", "https://accounts.google.com"], // Allow the Google Login popup
-            imgSrc: ["'self'", "data:", "https://lh3.googleusercontent.com"], // Allow profile pictures
-            styleSrc: ["'self'", "'unsafe-inline'"], // Allow CSS
-        },
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "https://accounts.google.com"],
+      connectSrc: ["'self'", "https://accounts.google.com"],
+      frameSrc: ["'self'", "https://accounts.google.com"],
+      imgSrc: ["'self'", "data:", "https://lh3.googleusercontent.com"],
     },
-    xFrameOptions: { action: 'deny' } // Prevents Clickjacking
+  },
 }));
-//app.use(bodyParser.json({limit: "30mb", extended: true}));
-//app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
-//app.use(cors());
 
-// Replace the old 30mb lines with these:
-app.use(express.json({ limit: "10kb" }));
+app.use(express.json({ limit: "10kb" })); // Fix for Large Payload Attack
 app.use(express.urlencoded({ limit: "10kb", extended: true }));
 
 app.use(cors({
   origin: "http://localhost:3000",
   methods: ["GET", "POST"],
-  credentials: true
+  credentials: true // Required for Cross-Domain configuration
 }));
 
-
-app.use("/posts", postRoutes);
-app.use("/user", authRoutes);
-const url = process.env.CONNECTION_URL;
-//let url = "mongodb+srv://ms26903392_db_user:iPEB1wKEHb4xhYuG@softwaresecurity.zay97sj.mongodb.net/?appName=SoftwareSecurity";
-const port = process.env.port || 5000;
-mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
-    .then(()=>{ app.listen(port , ()=>console.log("Server is running")) })
-    .catch((err)=>{console.log(err.message)});
-
-// mongoose.set("useFindAndModify", false);    
-
-
-import session from 'express-session';
-import passport from 'passport';
-import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
-
-// 1. Session Configuration
+// --- 2. Session & Passport Initialization ---
 app.use(session({
-  secret: 'secret_key', // In a real app, move this to .env too
+  secret: 'social_media_secret',
   resave: false,
   saveUninitialized: true
 }));
@@ -69,14 +51,13 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// 2. Google Strategy Configuration
+// --- 3. Google OAuth Strategy ---
 passport.use(new GoogleStrategy({
-    clientID: process.env.GOOGLE_CLIENT_ID,
-    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:5000/auth/google/callback" // Match your Google Console setting
+    clientID: process.env.GOOGLE_CLIENT_ID, // From your .env
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET, // From your .env
+    callbackURL: "http://localhost:5000/auth/google/callback" //http://localhost:5000/auth/google/callback
   },
   (accessToken, refreshToken, profile, done) => {
-    // Here you would typically find or create a user in your MongoDB
     return done(null, profile);
   }
 ));
@@ -84,12 +65,24 @@ passport.use(new GoogleStrategy({
 passport.serializeUser((user, done) => done(null, user));
 passport.deserializeUser((user, done) => done(null, user));
 
-// 3. Auth Routes
+// --- 4. Routes ---
+app.use("/posts", postRoutes);
+app.use("/user", authRoutes);
+
+// Auth Routes for OAuth Grant Type requirement
 app.get('/auth/google',
   passport.authenticate('google', { scope: ['profile', 'email'] }));
 
 app.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/login' }),
   (req, res) => {
-    res.redirect('http://localhost:3000'); // Redirect back to your React frontend
+    res.redirect('http://localhost:3000');
   });
+
+// --- 5. Database Connection ---
+const url = process.env.CONNECTION_URL; // Using .env for security
+const port = process.env.PORT || 5000;
+
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
+    .then(()=>{ app.listen(port , ()=>console.log("Server is running")) })
+    .catch((err)=>{console.log(err.message)});

@@ -6,6 +6,25 @@ import {useDispatch} from 'react-redux';
 import jwt_decode from "jwt-decode";
 import {signin, signup} from '../../actions/auth';
 
+//Add 0Auth part
+const handleGoogleLogin = () => {
+    // This triggers the flow you just tested in the browser
+    window.location.href = 'http://localhost:5000/auth/google';
+};
+
+// Inside your return/JSX:
+<button
+    onClick={handleGoogleLogin}
+    className="google-btn"
+    style={{ backgroundColor: '#4285F4', color: 'white', padding: '10px', cursor: 'pointer' }}
+>
+    Sign in with Google
+</button>
+//Add 0Auth part
+
+
+
+
 const initialData = {firstname: "", lastname: "", email: "", password: "", confirmPassword: ""};
 
 function Auth() {
