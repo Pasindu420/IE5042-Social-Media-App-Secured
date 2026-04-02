@@ -55,3 +55,41 @@ mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
 // mongoose.set("useFindAndModify", false);    
 
 
+import session from 'express-session';
+import passport from 'passport';
+import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
+
+// 1. Session Configuration
+app.use(session({
+  secret: 'secret_key', // In a real app, move this to .env too
+  resave: false,
+  saveUninitialized: true
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+// 2. Google Strategy Configuration
+passport.use(new GoogleStrategy({
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: "http://localhost:5000/auth/google/callback" // Match your Google Console setting
+  },
+  (accessToken, refreshToken, profile, done) => {
+    // Here you would typically find or create a user in your MongoDB
+    return done(null, profile);
+  }
+));
+
+passport.serializeUser((user, done) => done(null, user));
+passport.deserializeUser((user, done) => done(null, user));
+
+// 3. Auth Routes
+app.get('/auth/google',
+  passport.authenticate('google', { scope: ['profile', 'email'] }));
+
+app.get('/auth/google/callback',
+  passport.authenticate('google', { failureRedirect: '/login' }),
+  (req, res) => {
+    res.redirect('http://localhost:3000'); // Redirect back to your React frontend
+  });
