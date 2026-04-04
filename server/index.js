@@ -11,6 +11,8 @@ app.use(helmet({
     contentSecurityPolicy: true, // Specifically enables CSP to prevent XSS
     xFrameOptions: { action: 'deny' } // Strictly prevents Clickjacking
 }));
+app.use(Express.json({ limit: "10kb" }));
+app.use(Express.urlencoded({ limit: "10kb", extended: true }));
 app.use(cors());
 
 
